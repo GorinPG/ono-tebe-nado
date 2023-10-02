@@ -183,7 +183,7 @@
 }
 
 .lots{
-  padding: 180px 50px 0 50px;
+  padding: 182px 50px 0 50px;
 }
 
 .lots__heading{
@@ -323,7 +323,7 @@
 }
 
 .about__text-second{
-  padding-top: 25px;
+  padding-top: 28px;
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -333,7 +333,7 @@
 }
 
 .footer{
-  padding: 0 50px 90px 50px;
+  padding: 5px 50px 90px 50px;
   display: grid;
   grid-template-columns: 240px 505px 595px;
   align-items: center;
