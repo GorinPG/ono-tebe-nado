@@ -1,9 +1,12 @@
+.content-section{
+  margin: 0;
+}
+
 .header{
-  padding: 92px 50px 92px 50px;
+  padding: 90px 50px;
   display: grid;
   grid-template-columns: 597px 503px 240px;
   align-items: center;
-  width: 1440px;
 }
 
 .header__menu{
@@ -11,13 +14,14 @@
 }
 
 .header__menu-list{
-  padding-left: 0;
   display: flex;
   list-style: circle;
   gap: 32px;
 }
 
 .header__menu-list .header__menu-item_active{
+  /*предыдущий ревьюер отметил ошибкой и написал, что не следует повышать вес селектора, но я взял это 
+  решение из разбора одного из предыдущих уроков (кейс "С чистого листа"), где был применён ровно такой метод.*/
   list-style: none;
 }
 
@@ -30,14 +34,12 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  font-weight: 400;
-  font-size: 18px;
   color: #000;
   font-family: 'Raleway', sans-serif;
 }
 
 .header__logo{
-  width: 139px;
+  width: 140px;
   justify-self: start;
 }
 
@@ -54,7 +56,6 @@
   line-height: 24.3px;
   font-family: 'Raleway', sans-serif;
   justify-self: start;
-  align-self: end;
 }
 
 .address-link{
@@ -68,23 +69,21 @@
 
 .cover{
   display: flex;
-  gap: 100px;
+  gap: 120px;
   flex-direction: column;
   justify-content: space-between;
-  padding: 165px 50px 40px 50px;
-  background-image: url(/images/cover.jpg);
-  background-size: 100% auto;
+  padding: 165px 20px 50px 50px;
+  background-image: url(../images/cover.jpg);
+  background-size: 100% 101%;
   background-repeat: no-repeat;
   color: #FFF;
   position: relative;
-  z-index: -1;
-  width: 1340px;
-  margin: 0;
+  z-index: 0;
 }
 
 .overlay{
+  width: 100%;
   background-color: rgb(0 0 0 / 0.6);
-  background-size: cover;
   z-index: 0;
   position: absolute;
   top: 0;
@@ -94,86 +93,81 @@
 }
 
 .cover__title{
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-.cover__title__text{
-  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.cover__title__text__row{
-  height: 115px;
-  letter-spacing: 0px;
+  gap: 13px;
+  position: relative;
   margin: 0;
-}
-
-.cover__title__text__row__first_part{
-  margin: 0;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
   letter-spacing: 30px;
-  margin-right: -60px;
-  font-size: 100px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100px;
-  text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
 }
 
-.cover__title__text__row__second_part{
-  margin: 0;
-  padding-left: 40px;
-  padding-right: 40px;
-  text-align: right;
-  font-family: Raleway;
-  font-size: 100px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100px;
-  text-transform: uppercase;
+.cover__title__row-first{
+  display: flex;
+  padding-top: 9px;
+  height: 115px;
 }
 
-.cover__title__text__row__third_part{
-  margin: 0;
-  font-family: 'Raleway', sans-serif;
-  font-size: 100px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-  text-transform: uppercase;
+.cover__title__row-first__part-two{
+  padding-left: 30px;
 }
 
-.text__center{
-  text-align: center;
+.cover__title__row-second{
+  display: flex;
+  padding-right: 60px;
+  height: 115px;
+  justify-content: center;
+  align-items: center;
 }
 
-.text__right{
-  text-align: right;
+.cover__title__row-second__part-two{
+  padding-left: 30px;
+}
+
+.cover__title__row-third{
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  height: 115px;
+}
+
+.cover__title__row-third__part-two{
+  display: flex;
+  justify-content: end;
+  margin-left: 30px;
 }
 
 .cover__description{
+  padding-right: 30px;
   margin: 0;
   display: flex;
   justify-content: end;
-  gap: 78px;
+  align-items: center;
   position: relative;
+  gap: 78px;
 }
 
 .cover__description-text{
-  word-spacing: 20px;
+  max-width: 633px;
+  word-spacing: 17.7px;
+  text-align: center;
   font-family: 'Raleway', sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .bet-button{
+  height: 52px;
+  width: 257px;
   background-color: transparent;
   border-color: #FFF;
   border-width: 1px;
@@ -186,18 +180,14 @@
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  padding: 0 32px;
 }
 
 .lots{
-  padding: 180px 50px 0 10px;
-  width: 1440px;
+  padding: 180px 50px 0 50px;
 }
 
 .lots__heading{
-  padding-left: 80px;
-  margin-bottom: 0;
-  margin-top: 0;
+  padding-left: 40px;
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 40px;
@@ -208,14 +198,12 @@
 }
 
 .lots__card-list{
-  margin-top: 0;
   display: flex;
   gap: 25px;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding-top: 37px;
   list-style: none;
-  margin-bottom: 30px;
+  padding-top: 27px;
 }
 
 .card-link{
@@ -228,18 +216,19 @@
 }
 
 .card{
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
   height: 450px;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
 }
 
 .card_type_film{
-  background-image: url(/images/card-lot-01.jpg);
-  background-size: cover;
-  position: relative;
-  z-index: -1;
+  background-image: url(../images/card-lot-01.jpg);
 }
 
 .card__title{
@@ -269,21 +258,15 @@
 }
 
 .card_type_book{
-  background-image: url(/images/card-lot-02.jpg);
-  background-size: cover;
-  position: relative;
-  z-index: -1;
+  background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture{
-  background-image: url(/images/card-lot-03.jpg);
-  background-size: cover;
-  position: relative;
-  z-index: -1;
+  background-image: url(../images/card-lot-03.jpg);
 }
 
 .lots__look-more-link{
-  padding-left: 90px;
+  padding-left: 40px;
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -293,8 +276,7 @@
 }
 
 .about{
-  padding: 170px 0 145px 50px;
-  width: 1340x;
+  padding: 182px 50px 180px 50px;
   display: grid;
   grid-template-columns: 430px 910px;
 }
@@ -316,14 +298,11 @@
 }
 
 .about__column__text{
-  margin: 0;
   padding-top: 100px;
   padding-left: 26px;
 }
 
 .about__title{
-  margin-top: 0;
-  margin-bottom: 100px;
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 40px;
@@ -334,6 +313,7 @@
 }
 
 .about__text{
+  padding-top: 100px;
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -343,7 +323,7 @@
 }
 
 .about__text-second{
-  padding-top: 8px;
+  padding-top: 25px;
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -353,11 +333,10 @@
 }
 
 .footer{
-  padding: 0 50px 50px 50px;
+  padding: 0 50px 90px 50px;
   display: grid;
   grid-template-columns: 240px 505px 595px;
   align-items: center;
-  width: 1340px;
 }
 
 .footer__menu{
@@ -397,4 +376,3 @@
 .footer__social-icon{
   height: 48px;
 }
-
