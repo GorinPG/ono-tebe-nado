@@ -5,7 +5,7 @@
 .header{
   padding: 90px 50px;
   display: grid;
-  grid-template-columns: 597px 503px 240px;
+  grid-template-columns: 601px 499px 240px;
   align-items: center;
 }
 
@@ -19,14 +19,12 @@
   gap: 32px;
 }
 
-.header__menu-list .header__menu-item_active{
-  /*предыдущий ревьюер отметил ошибкой и написал, что не следует повышать вес селектора, но я взял это 
-  решение из разбора одного из предыдущих уроков (кейс "С чистого листа"), где был применён ровно такой метод.*/
-  list-style: none;
+.header__menu-link_active{
+  text-decoration: none;
 }
 
-.header__menu-item_active .header__menu-link{
-  text-decoration: none;  
+.header__menu-item_active{
+  list-style: none;
 }
 
 .header__menu-link{
@@ -69,7 +67,7 @@
 
 .cover{
   display: flex;
-  gap: 120px;
+  gap: 135px;
   flex-direction: column;
   justify-content: space-between;
   padding: 165px 20px 50px 50px;
@@ -110,7 +108,6 @@
 .cover__title__row-first{
   display: flex;
   padding-top: 9px;
-  height: 115px;
 }
 
 .cover__title__row-first__part-two{
@@ -120,7 +117,7 @@
 .cover__title__row-second{
   display: flex;
   padding-right: 60px;
-  height: 115px;
+  padding-top: 15px;
   justify-content: center;
   align-items: center;
 }
@@ -130,10 +127,10 @@
 }
 
 .cover__title__row-third{
+  padding-top: 5px;
   display: flex;
   justify-content: end;
   align-items: start;
-  height: 115px;
 }
 
 .cover__title__row-third__part-two{
@@ -166,8 +163,8 @@
 }
 
 .bet-button{
-  height: 52px;
-  width: 257px;
+  min-height: 52px;
+  min-width: 257px;
   background-color: transparent;
   border-color: #FFF;
   border-width: 1px;
@@ -221,7 +218,7 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  height: 450px;
+  min-height: 450px;
   background-size: cover;
   position: relative;
   z-index: 0;
@@ -303,6 +300,7 @@
 }
 
 .about__title{
+  padding-bottom: 75px;
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 40px;
@@ -313,17 +311,7 @@
 }
 
 .about__text{
-  padding-top: 100px;
-  color: #000;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.about__text-second{
-  padding-top: 28px;
+  padding-top: 25px;
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -333,7 +321,7 @@
 }
 
 .footer{
-  padding: 5px 50px 90px 50px;
+  padding: 0 50px 90px 50px;
   display: grid;
   grid-template-columns: 240px 505px 595px;
   align-items: center;
@@ -350,7 +338,7 @@
   justify-self: end;
 }
 
-.footer__menu-item_active .footer__menu-link{
+.footer__menu-link_active{
   text-decoration: none;  
 }
 
